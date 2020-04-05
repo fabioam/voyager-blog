@@ -10,12 +10,12 @@ class BlogCategoriesDataTypesTableSeeder extends Seeder
      */
     public function run()
     {
-        $dataType = $this->dataType('slug', 'categories');
+        $dataType = $this->dataType('slug', 'blog_categories');
         if (!$dataType->exists) {
             $dataType->fill([
-                'name'                  => 'categories',
-                'display_name_singular' => 'Category',
-                'display_name_plural'   => 'Categories',
+                'name'                  => 'blog_categories',
+                'display_name_singular' => 'Blog Category',
+                'display_name_plural'   => 'Blog Categories',
                 'icon'                  => 'voyager-categories',
                 'model_name'            => 'Pvtl\\VoyagerBlog\\Category',
                 'controller'            => '\\TCG\\Voyager\\Http\\Controllers\\VoyagerBaseController',

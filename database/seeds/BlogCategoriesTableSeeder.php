@@ -18,7 +18,7 @@ class BlogCategoriesTableSeeder extends Seeder
     public function run()
     {
         //Data Rows
-        $categoryDataType = DataType::where('slug', 'categories')->firstOrFail();
+        $categoryDataType = DataType::where('slug', 'blog_categories')->firstOrFail();
         $dataRow = $this->dataRow($categoryDataType, 'id');
         if (!$dataRow->exists) {
             $dataRow->fill([
@@ -151,9 +151,9 @@ class BlogCategoriesTableSeeder extends Seeder
         $menu = Menu::where('name', 'admin')->firstOrFail();
         $menuItem = MenuItem::firstOrNew([
             'menu_id' => $menu->id,
-            'title'   => __('voyager::seeders.menu_items.categories'),
+            'title'   => __('voyager::seeders.menu_items.blog_categories'),
             'url'     => '',
-            'route'   => 'voyager.categories.index',
+            'route'   => 'voyager.blog_categories.index',
         ]);
         if (!$menuItem->exists) {
             $menuItem->fill([
@@ -166,7 +166,7 @@ class BlogCategoriesTableSeeder extends Seeder
         }
 
         //Permissions
-        Permission::generateFor('categories');
+        Permission::generateFor('blog_categories');
 
         //Content
         $category = Category::firstOrNew([

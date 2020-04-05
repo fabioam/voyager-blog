@@ -83,9 +83,9 @@ class BlogMenuItemsTableSeeder extends Seeder
         // Nest Posts and Categories under Blog
         $categoryItem = MenuItem::firstOrNew([
             'menu_id' => $menu->id,
-            'title' => 'Categories',
+            'title' => 'Blog Categories',
             'url' => '',
-            'route' => 'voyager.categories.index',
+            'route' => 'voyager.blog_categories.index',
             'target' => '_self',
             'icon_class' => 'voyager-categories',
             'color' => null,

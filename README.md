@@ -1,5 +1,7 @@
 # Voyager Blog
 
+Forked from https://github.com/pvtl/voyager-blog with 'categories' table renamed to 'blog_categories'
+
 This [Laravel](https://laravel.com/)/[Voyager](https://laravelvoyager.com/) module adds a Blog to Voyager.
 
 Built by [Pivotal Agency](https://pivotal.agency/).
